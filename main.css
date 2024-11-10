@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Base Styles */
+body {
+    background-color: #000;
+    color: #ffffff !important;
+    font-family: "Poppins", serif;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.navbar {
+    background-color: #000000;
+    padding: 1rem 2rem;
+    position: sticky !important;
+    top: 0px !important;
+    z-index: 999 !important;
+}
+
+/* Navbar logo */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Centered links */
+.navbar-nav .nav-link {
+    color: #ffffff;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #cccccc;
+}
+
+.navbar-nav {
+    margin-left: 5rem;
+    transition: all 0.5 ease;
+}
+
+.active {
+    text-decoration: underline 3px #0c2781;
+    text-underline-offset: 0.4rem;
+    color: white !important;
+    transition: all 0.5 ease;
+}
+
+
+/* Right-aligned actions */
+.login-link {
+    color: #ffffff;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+/* "Create Account" button */
+.create-account-btn {
+    color: #ffffff;
+    border: 1px solid #0c2781;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    outline: none !important;
+    transition: all 0.5s ease;
+}
+
+.create-account-btn:hover {
+    color: #ffffff;
+    background-color: #0c2781;
+    border: 1px solid #0c2781;
+    outline: none !important;
+    transition: all 0.5s ease;
+}
+
+.gradient-text {
+    margin-top: 8rem;
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #000000, #ffffff, #161616);
+    /* Background gradient for the text */
+    -webkit-background-clip: text;
+    color: transparent;
+    /* Make text transparent to reveal gradient */
+    text-align: center;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #0c2781;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    background-color: #041141;
+    transition: all 0.5s ease;
+}
+
+.buy-button {
+    opacity: 0;
+    transform: translateY(10px); /* Start position for slide-in effect */
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #d500f9;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.buy-button:hover{
+    background-color: #700383; 
+    transition: all 0.5s ease;
+}
+
+.bx-shopping-bag{
+    margin-left: 0.3rem;
+}
+
+.buy-button.show {
+    opacity: 1;
+    transform: translateY(0); /* Final position when fully visible */
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 6rem;
+}
+
+.card {
+    position: relative;
+    border-radius: 20px;
+    /* zaokrąglenie dla obramowania */
+    background: rgb(0, 0, 0);
+    /* tło głównego elementu */
+    box-shadow: 0 0 0 5px transparent;
+    /* do stworzenia „obramowania” */
+    padding: 20px;
+    color: #ffffff;
+}
+
+.card::before {
+    content: "";
+    /* wymagane do wyświetlenia pseudo-elementu */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    /* dziedziczy zaokrąglenie */
+    background: linear-gradient(180deg, #0c2781, #000000);
+    /* gradient */
+    z-index: -1;
+    /* pseudo-element znajduje się za treścią */
+    padding: 4px;
+    /* szerokość gradientowego obramowania */
+    margin: -4px;
+    /* dopasowanie marginesu do szerokości obramowania */
+}
+
+.card h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.card ul li i {
+    color: #d500f9;
+    margin-right: 10px;
+}
+
+
+.gradient-text1 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #000000, #ffffff, #161616);
+    /* Background gradient for the text */
+    -webkit-background-clip: text;
+    color: transparent;
+    /* Make text transparent to reveal gradient */
+    text-align: center;
+}
+
+.container-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.description-text {
+    color: #3C4042;
+    font-size: 18px;
+    max-width: 50rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 2rem;
+    gap: 7rem;
+}
+
+.card2 {
+    position: relative;
+    /* aby pseudo-element odnosił się do rodzica */
+    width: 30rem;
+    height: 20rem;
+    border-radius: 20px;
+    /* zaokrąglenie dla obramowania */
+    background: rgb(0, 0, 0);
+    /* tło głównego elementu */
+    box-shadow: 0 0 0 5px transparent;
+    /* do stworzenia „obramowania” */
+}
+
+.card2::before {
+    content: "";
+    /* wymagane do wyświetlenia pseudo-elementu */
+    position: absolute;
+    top: 0;
+    /* zmiana na 0, aby gradient był na krawędziach */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    /* dziedziczy zaokrąglenie */
+    background: linear-gradient(180deg, #787878, #000000);
+    /* gradient */
+    z-index: -1;
+    /* pseudo-element znajduje się za treścią */
+    padding: 2px;
+    /* dodaje przestrzeń do gradientu */
+    margin: -4px;
+    /* zmienia margines, aby gradient wystawał na zewnątrz */
+}
+
+
+
+.box {
+    margin: 2rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: gray;
+    border-radius: 10px;
+    background: rgb(17, 18, 22);
+    background: linear-gradient(180deg, rgba(17, 18, 22, 1) 0%, rgba(33, 32, 36, 1) 100%);
+    font-size: 22px;
+}
+
+.title h3 {
+    font-size: 22px;
+    color: #AFAFAF;
+    margin: 0 2rem;
+}
+
+.description p {
+    font-size: 18px;
+    margin: 0.5rem 2rem;
+    color: #4A4E51;
+}
+
+.project1 {
+    margin: 5rem;
+    transform: scaleX(-1);
+    float: left;
+    /* Horizontal mirror effect */
+}
+
+.project {
+    margin: 5rem;
+    float: right;
+}
+
+#category3 img {
+    width: 100%;
+    /* Image will take the full width of its container */
+    max-width: 45rem;
+    /* Limit the maximum width to 45rem */
+    height: auto;
+    /* Keeps the aspect ratio */
+}
+
+/* Adjust the text style as needed */
+
+
+
+
+.background-container {
+    position: relative;
+    width: 100%;
+    /* Szerokość pomniejszona o 20rem, czyli po 10rem z każdej strony */
+    height: 70vh;
+    background: linear-gradient(180deg, #000000 0%, #0a0a0a 20%, #1e1e2e 60%, #040425 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.background-container::before,
+.background-container::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    /* Kształt koła */
+    filter: blur(100px);
+    /* Rozmycie dla efektu świecenia */
+    opacity: 0.6;
+    /* Przezroczystość dla subtelności */
+}
+
+.background-container::before {
+    width: 300px;
+    height: 300px;
+    background: rgba(70, 130, 180, 0.6);
+    /* Błękitny kolor z przezroczystością */
+    top: 20rem;
+    left: calc(10rem + 20%);
+    /* Odstęp od lewej o 10rem */
+}
+
+.background-container::after {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 105, 180, 0.5);
+    /* Różowy kolor z przezroczystością */
+    bottom: -50px;
+    right: calc(10rem + 20%);
+    /* Odstęp od prawej o 10rem */
+}
+
+
+footer {
+    background-color: #000 !important;
+    /* Dark background */
+}
+
+footer h5,
+footer h6 {
+    color: #ffffff;
+    /* White text */
+    font-weight: bold;
+}
+
+footer a {
+    color: #b0b0b0;
+    /* Light grey links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+    /* White on hover */
+}
+
+form .form-control {
+    background-color: #333;
+    color: #b0b0b0;
+    border: none;
+}
+
+form .btn {
+    border: none;
+    color: #ffffff;
+}
+
+/* Initial styles for nav links */
+.navbar .nav-link {
+    transition: all 0.5s ease;
+    /* Smooth transition for all properties */
+    opacity: 0.6;
+    /* Initial, slightly transparent */
+}
+
+/* Style for the active nav link */
+.navbar .nav-link.active {
+    opacity: 1;
+    /* Fully opaque for the active link */
+    /* Example: change color to blue or any other active color */
+    font-weight: bold;
+    /* Optional: make the active link bold */
+}
